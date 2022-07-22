@@ -1,6 +1,7 @@
 ## SENTIMENT ANALYSIS OF CUSTOMER'S REVIEWS ON TOP FINTECH COMPANIES PRODUCTS 
 
-![](sentiment.png)
+![image](sentiment.png)
+courtesy: MonkeyLearn
 
 ## INTRODUCTION
 <p>In every day life of the modern era, companies(technical and non-technical) and start-ups release products of different categories for consumer's benefits. Selection of one or more of these products are accompanied by the experience and feedbacks of the earlier users. Customer's who have already used products justify their experience by putting up a review on the internet and also leave a ratings after its usage. Ratings can be easily sorted and judged as a result of its ordinality, 1- very poor, 3- neutral and 5- very good on a 1-5 scale. But Reviews comes with sentences, positive or negative texts, which will requires thorough reading and understanding for the message to be conveyed to the developer of the products. 
