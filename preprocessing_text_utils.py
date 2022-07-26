@@ -2,6 +2,7 @@ import ast
 import re
 import nltk
 import pandas as pd
+import emoji
 
 # Function to load the contraction file from text file
 def load_contraction_dicts():
@@ -29,6 +30,12 @@ def clean_text(text: str):
     text = re.sub('[^\w\s]', '', text)
     text = re.sub('https?://\S+|www\.\S+', '', text)
     return text
+
+
+def remove_emoji(text):
+    text = emoji.replace_emoji(text, replace="")
+    return text
+
 
 # Function to remove stop words
 def stop_words_removal(text : list):
@@ -66,6 +73,7 @@ def process_text(text, do_stem= False, do_lemmatization = False):
     text = text.lower()
     text = expand_contractions(text, load_contraction_dicts())
     text = clean_text(text)
+    text = remove_emoji(text)
     text = text.split()
     text = stop_words_removal(text)
     if do_stem == True:
@@ -86,3 +94,4 @@ def length_analysis(new_df: pd.DataFrame, column : str):
     df['avg_sentence_lenght'] = df['word_count'] / df['sentence_count']
 
     return df
+
